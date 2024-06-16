@@ -1,0 +1,9 @@
+{
+  "button_success": "alcohol__success",
+  "button_cookies": "cookies__button",
+  "discounts_elements": "new-card-product__badge",
+  "images_elements": ".new-card-product__image-wrap.new-card-product__image-wrap-catalog",
+  "names_elements": "new-card-product__title",
+  "prices_elements": "new-card-product__price-regular",
+  "last_prices_elements": "new-card-product__price-old"
+}

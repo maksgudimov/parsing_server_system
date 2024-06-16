@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest  # Используем последнюю версию Redis
+    ports:
+      - "6379:6379"  # Экспонируем порт Redis, чтобы Celery мог подключиться
+#    networks:
+#      - celery_network
+
+#  celery_worker:
+#    image: celery:latest  # Здесь вы можете указать свой образ Celery, если есть
+#    command: celery -A project worker --loglevel=info  # Укажите путь к вашей Celery конфигурации
+#    volumes:
+#      - .:/app  # Монтируем текущую директорию, чтобы Celery мог увидеть код Django
+#    depends_on:
+#      - redis  # Указываем, что Celery зависит от Redis
+#    networks:
+#      - celery_network
+#
+#networks:
+#  celery_network:
+#    driver: bridge  # Создаем внутреннюю сеть для взаимодействия между сервисами
