@@ -15,17 +15,15 @@ class User(AbstractUser):
         db_index=True
     )
     unique_id = models.CharField(max_length=32, unique=True, blank=True, null=True)
-    # Решаем конфликт обратного имени для групп
     groups = models.ManyToManyField(
         Group,
-        related_name='account_user_groups',  # Уникальное имя
+        related_name='account_user_groups',
         blank=True
     )
 
-    # Решаем конфликт обратного имени для разрешений
     user_permissions = models.ManyToManyField(
         Permission,
-        related_name='account_user_permissions',  # Уникальное имя
+        related_name='account_user_permissions',
         blank=True
     )
 
